@@ -43,7 +43,7 @@ class DummyDataGenerator:
                 "dateSold": d.isoformat(),
                 "item": product["name"],
                 "qty": qty,
-                "price": product["price"] * qty,
+                "price": product["price"],
                 "lat": uniform(-90.0, 90.0),
                 "long": uniform(-180, 180),
                 "gender": choice(["male", "female"]),
@@ -56,17 +56,14 @@ class DummyDataGenerator:
         return self.allRecords
 
     def saveRecords():
-        import csv
+        with open("names.csv", "w", newline="") as csvfile:
+            fieldnames = ["dateSold", "item","quantity","price","lat","long","gender","rating","soldFromBranch"]
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
-
-with open("names.csv", "w", newline="") as csvfile:
-    fieldnames = ["dateSold", "item","quantity","price","lat","long","gender","rating","soldFromBranch"]
-    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-
-    writer.writeheader()
-    writer.writerow({"first_name": "Baked", "last_name": "Beans"})
-    writer.writerow({"first_name": "Lovely", "last_name": "Spam"})
-    writer.writerow({"first_name": "Wonderful", "last_name": "Spam"})
+            writer.writeheader()
+            writer.writerow({"first_name": "Baked", "last_name": "Beans"})
+            writer.writerow({"first_name": "Lovely", "last_name": "Spam"})
+            writer.writerow({"first_name": "Wonderful", "last_name": "Spam"})
 
 
 m = DummyDataGenerator()

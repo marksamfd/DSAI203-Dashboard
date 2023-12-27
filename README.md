@@ -14,7 +14,7 @@ Sales department, Company CEO
 
 
 ## Dashboard Questions
-[1]: What is the overall trend in sales over time based on "dateSold"? 
+[^1]: What is the overall trend in sales over time based on "dateSold"? 
 
 
-[You can use numbers for reference-style link definitions][1]
+[You can use numbers for reference-style link definitions][^1]

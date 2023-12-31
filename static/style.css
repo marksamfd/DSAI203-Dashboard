@@ -1,0 +1,27 @@
+html, body {
+    height: 100%;
+}
+
+#mainContainer {
+    height: 90% !important;
+}
+label {
+    /* font-weight: bold; */
+    margin-bottom: 2.5%;
+}
+.filterSelector {
+    padding: 3% 3.5%;   
+}
+.productSalesCard{
+    width: 200px;
+}
+
+.productSalesCard .card-body{
+    padding: var(--bs-card-spacer-y) 2.9% ;
+}
+
+.charts{
+    height: 250px;
+    width: 100%;
+    padding: 2.5%;
+}
